@@ -13,7 +13,7 @@ public class IpCounterTest {
     @Test
     public void counting() {
         ipCounter.counting("src/test/resources/test.txt");
-        assertEquals(799999, ipCounter.getResult());
+        assertEquals(104, ipCounter.getResult());
     }
 
     @Test
