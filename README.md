@@ -6,4 +6,4 @@
 
 ## Запуск приложения
 
-`java -jar target/codereviewipcounter-1.0-jar-with-dependencies.jar -f file-path
+`java -jar target/codereviewipcounter-1.0-jar-with-dependencies.jar -f file-path'
