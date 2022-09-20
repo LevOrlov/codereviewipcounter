@@ -22,7 +22,7 @@ public class Utils {
                 .setUnit("MB", 1048576);
     }
 
-    public static int ipToLong(String ipAddress) throws UnknownHostException {
+    public static int convertIpToInt(String ipAddress) throws UnknownHostException {
         return ByteBuffer.allocate(Integer.BYTES)
                 .put(InetAddress.getByName(ipAddress).getAddress())
                 .getInt(0);
