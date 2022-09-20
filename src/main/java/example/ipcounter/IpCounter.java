@@ -7,9 +7,8 @@ import me.tongfei.progressbar.ProgressBarBuilder;
 import java.io.*;
 import java.util.BitSet;
 
+import static example.ipcounter.Utils.convertIpToInt;
 import static example.ipcounter.Utils.getProgressBarBuilder;
-import static example.ipcounter.Utils.ipToLong;
-
 public class IpCounter {
 
     private final BitSet positive = new BitSet(Integer.MAX_VALUE);
