@@ -18,7 +18,7 @@ public class IpCounterTest {
 
     @Test
     public void checkConvertorIp() throws UnknownHostException {
-        assertEquals(-1, Utils.ipToLong("255.255.255.255"));
+        assertEquals(-1, Utils.convertIpToInt("255.255.255.255"));
     }
 
 }
