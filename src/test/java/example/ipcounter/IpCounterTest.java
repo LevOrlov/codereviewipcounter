@@ -11,7 +11,7 @@ public class IpCounterTest {
     IpCounter ipCounter = new IpCounter();
 
     @Test
-    public void counting() {
+    public void checkCountingIp() {
         ipCounter.counting("src/test/resources/test.txt");
         assertEquals(104, ipCounter.getResult());
     }
