@@ -31,7 +31,8 @@ public class IpCounter {
             }
             resultCountIp = negative.cardinality() + positive.cardinality();
         } catch (IOException e) {
-            System.err.println("Ошибка обработки. Счетчик уникальных адресов не валиден.");
+            System.err.println("Ошибка обработки. Счетчик уникальных адресов обнулен.");
+            resultCountIp = 0;
             e.printStackTrace();
         }
     }
