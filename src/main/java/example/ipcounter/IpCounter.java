@@ -25,7 +25,7 @@ public class IpCounter {
             String ipString;
             long ipLong;
             while ((ipString = reader.readLine()) != null) {
-                ipLong = ipToLong(ipString);
+                ipLong = convertIpToInt(ipString);
                 if (ipLong < 0) negative.set(-(int) ipLong);
                 if (ipLong > 0) positive.set((int) ipLong);
             }
