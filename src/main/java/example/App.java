@@ -19,14 +19,14 @@ public class App {
             return;
         }
 
-        Optional<String> fileName = Optional.of(args[1]);
-        if (!Files.exists(Paths.get(fileName.orElse(EMPTY_STRING)))) {
-            System.err.println("Не удается найти файл: " + fileName.get());
+        Optional<String> filePath = Optional.of(args[1]);
+        if (!Files.exists(Paths.get(filePath.orElse(EMPTY_STRING)))) {
+            System.err.println("Не удается найти файл: " + filePath.get());
             return;
         }
 
         IpCounter ipCounter = new IpCounter();
-        ipCounter.counting(fileName.orElse(EMPTY_STRING));
+        ipCounter.counting(filePath.orElse(EMPTY_STRING));
         System.out.println("Количество уникальных адресов: " + ipCounter.getResult());
     }
 

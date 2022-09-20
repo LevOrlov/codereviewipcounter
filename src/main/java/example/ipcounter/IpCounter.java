@@ -16,20 +16,20 @@ public class IpCounter {
 
     private long resultCountIp;
 
-    public void counting(String fileName) {
-        ProgressBarBuilder pbb = getProgressBarBuilder(fileName);
+    public void counting(String filePath) {
+        ProgressBarBuilder pbb = getProgressBarBuilder(filePath);
         try (BufferedReader reader = new BufferedReader(
                 new InputStreamReader(
-                        ProgressBar.wrap(new FileInputStream(fileName), pbb)))) {
-            String ipString;
+                        ProgressBar.wrap(new FileInputStream(filePath), pbb)))) {
+            String ip;
             long ipLong;
-            while ((ipString = reader.readLine()) != null) {
-                ipLong = convertIpToInt(ipString);
+            while ((ip = reader.readLine()) != null) {
+                ipLong = convertIpToInt(ip);
                 if (ipLong < 0) negative.set(-(int) ipLong);
                 if (ipLong > 0) positive.set((int) ipLong);
             }
             resultCountIp = negative.cardinality() + positive.cardinality();
-        } catch (IOException e) {
+        } catch (Exception e) {
             System.err.println("Ошибка обработки. Счетчик уникальных адресов обнулен.");
             resultCountIp = 0;
             e.printStackTrace();
